@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  /* Theme color */
+  --primary-color: hsl(212, 86%, 64%);
+  --secondary-color: hsl(180, 62%, 55%);
+  --danger-color: hsl(0, 78%, 62%);
+  --warning-color: hsl(34, 97%, 64%);
+
+  /* Text color */
+  --dark-text-color: hsl(234, 12%, 34%);
+  --normal-text-color: hsl(229, 6%, 66%);
+  --light-text-color: hsl(0, 0%, 98%);
+}
+
+body {
+  background-color: var(--light-text-color);
+}
+
+/* LAYOUT */
+.my-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1140px;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.push-down-50 {
+  transform: translateY(50%);
+}
+
+/* TEXT */
+h2 {
+  color: var(--dark-text-color);
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: var(--dark-text-color);
+  font-size: 1.2rem;
+}
+
+p {
+  color: var(--normal-text-color);
+  font-size: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-light {
+  font-weight: 200;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+/* TITLE */
+.title {
+  width: 60%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* CARD */
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px var(--dark-text-color);
+  border-radius: 5px;
+  margin: 1rem;
+  max-width: 350px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.2rem;
+  width: 100%;
+}
+
+.card:nth-child(3) {
+  order: 2;
+}
+
+.card:nth-child(4) {
+  order: 1;
+}
+
+.border-top-primary::before {
+  background-color: var(--primary-color);
+}
+.border-top-danger::before {
+  background-color: var(--danger-color);
+}
+.border-top-warning::before {
+  background-color: var(--warning-color);
+}
+.border-top-secondary::before {
+  background-color: var(--secondary-color);
+}
+
+.card .img-cover img {
+  display: block;
+  margin-left: auto;
+}
+
+.card-content p {
+  margin: 1rem 0 2rem;
+}
+
+@media (max-width: 812px) {
+  .title {
+    width: 90%;
+  }
+
+  .push-down-50 {
+    transform: unset;
+  }
+
+  .card:nth-child(3) {
+    order: 0;
+  }
+
+  .card:nth-child(4) {
+    order: 0;
+  }
+}
