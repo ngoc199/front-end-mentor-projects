@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MY STYLE -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div id="wrapper">
+      <nav class="container">
+        <img src="./images/logo.svg" alt="" />
+      </nav>
+
+      <!-- HERO SECTION -->
+      <section id="hero">
+        <div class="bg-image"></div>
+        <div class="hero_content">
+          <div class="container">
+            <h1>We're <br /><span>coming soon</span></h1>
+
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+
+            <form action="">
+              <input
+                type="email"
+                placeholder="Email Address"
+                id="email"
+                oninvalid="showInvalid()"
+              />
+              <img
+                src="./images/icon-error.svg"
+                alt="error"
+                class="error-icon"
+              />
+              <button type="submit">
+                <img src="./images/icon-arrow.svg" alt="submit" />
+              </button>
+              <p class="error-message">Please provide a valid email</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p class="attribution" style="text-align: center;">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/ngoc199"
+          >Ngọc Nguyễn Duy Minh</a
+        >.
+      </p>
+    </footer>
+
+    <!-- MY SCRIPT -->
+    <script>
+      function showInvalid() {
+        let errorIcon = document.querySelector(".error-icon")
+        let errorMessage = document.querySelector(".error-message")
+        errorIcon.classList.add("active")
+        errorMessage.classList.add("active")
+      }
+    </script>
+  </body>
+</html>

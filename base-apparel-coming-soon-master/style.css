@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  --gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+
+html,
+body,
+#wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* HERO */
+#hero {
+  margin: 0;
+}
+
+/* HERO IMAGE */
+.bg-image {
+  background-image: url("./images/hero-mobile.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 100%;
+}
+
+/* HERO CONTENT */
+.hero_content {
+  text-align: center;
+  background-image: var(--gradient-1);
+  padding-bottom: 1rem;
+}
+
+h1 {
+  color: var(--desaturated-red);
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 span {
+  color: var(--dark-grayish-red);
+  font-weight: 600;
+}
+
+p {
+  color: var(--desaturated-red);
+  line-height: 2;
+  font-weight: 400;
+}
+
+/* FORM */
+form {
+  position: relative;
+}
+
+input[type="email"] {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding: 1rem;
+  height: 3rem;
+  width: 90%;
+  min-width: 7rem;
+  padding-right: 5rem;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.error-icon.active {
+  position: absolute;
+  right: 22%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+
+.error-icon {
+  display: none;
+}
+
+button[type="submit"] {
+  background-image: var(--gradient-2);
+  text-align: center;
+  height: 3rem;
+  width: 20%;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  right: 0px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.error-message {
+  display: none;
+}
+
+.error-message.active {
+  display: inline;
+  position: absolute;
+  color: var(--soft-red);
+  font-size: 0.8rem;
+  font-weight: 600;
+  left: 1rem;
+  bottom: -2.5rem;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  #wrapper {
+    height: 100vh;
+    position: relative;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: 50% 100%;
+    background-repeat: repeat;
+    background-position: top left;
+  }
+
+  .bg-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100vh;
+    background-position: left;
+    background-size: cover;
+  }
+
+  .hero_content {
+    background-image: none;
+    width: 60%;
+    text-align: left;
+    padding: 10vh 0;
+  }
+}
