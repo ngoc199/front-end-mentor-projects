@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red_color: hsl(0, 100%, 74%);
+  --green_color: hsl(154, 59%, 51%);
+  --blue_color: hsl(248, 32%, 49%);
+  --dark_blue_color: hsl(249, 10%, 26%);
+  --grayish_blue_color: hsl(246, 25%, 77%);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+/* LAYOUT */
+.container {
+  width: 77%;
+  max-width: 1113px;
+  margin: 0 auto;
+  padding: 12% 0;
+}
+
+.shadow_bottom {
+  box-shadow: 0 10px 6px -6px var(--dark_blue_color);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.6rem;
+}
+
+/* CONTACT */
+#contact {
+  background: var(--red_color) url("./images/bg-intro-mobile.png");
+  color: #ffffff;
+}
+
+#contact > .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact > .container > div:first-child {
+  text-align: center;
+}
+
+/* FORM */
+.form_caption {
+  background-color: var(--blue_color);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.form_caption > span {
+  font-weight: 700;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 10px;
+}
+
+.form_group {
+  margin-bottom: 0.875rem;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--grayish_blue_color);
+  border-radius: 10px;
+  color: #000000;
+  font-size: 1rem;
+}
+
+form input:focus {
+  border-color: #000000;
+}
+
+form input.error {
+  color: var(--red_color);
+  border-color: var(--red_color);
+  border-width: 2px;
+  background-image: url("./images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: center right 1rem;
+}
+
+form .form_error_message {
+  display: none;
+  color: var(--red_color);
+  font-style: italic;
+  text-align: right;
+  font-weight: 600;
+}
+
+form .form_error_message.active {
+  display: block;
+}
+
+form button[type="submit"] {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 1.25rem 0;
+  color: #ffffff;
+  background-color: var(--green_color);
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+form button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+form .form_agreement {
+  color: var(--grayish_blue_color);
+  display: block;
+  width: 82%;
+  text-align: center;
+  margin: 0.875rem auto;
+}
+
+form .form_agreement a {
+  color: var(--red_color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (min-width: 1000px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  #contact {
+    background: var(--red_color) url("./images/bg-intro-desktop.png");
+  }
+
+  #contact > .container > div:first-child {
+    flex: 1 1;
+    text-align: left;
+    margin-right: 6.7%;
+  }
+
+  #contact > .container > div:last-child {
+    flex: 1 1;
+  }
+}

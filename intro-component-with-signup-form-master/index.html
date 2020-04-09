@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MY STYLE -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact">
+      <div class="container">
+        <div>
+          <h2>Learn to code by watching others</h2>
+
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+
+        <div>
+          <p class="form_caption shadow_bottom">
+            <span>Try it free 7 days</span> then $20/mo. thereafter
+          </p>
+          <form action="/" class="shadow_bottom">
+            <div class="form_group">
+              <input
+                oninvalid="showErrorMessage('firstName');"
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                required
+              />
+              <small class="form_error_message"
+                >First Name cannot be empty</small
+              >
+            </div>
+            <div class="form_group">
+              <input
+                oninvalid="showErrorMessage('lastName');"
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                required
+              />
+              <small class="form_error_message"
+                >Last Name cannot be empty</small
+              >
+            </div>
+            <div class="form_group">
+              <input
+                oninvalid="showErrorMessage('email');"
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <small class="form_error_message"
+                >Looks like this is not an email</small
+              >
+            </div>
+            <div class="form_group">
+              <input
+                oninvalid="showErrorMessage('password');"
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <small class="form_error_message">Password cannot be empty</small>
+            </div>
+            <button type="submit">Claim your free trial</button>
+            <small class="form_agreement"
+              >By clicking the button, you are agreeing to our
+              <a href="/">Terms and Services</a></small
+            >
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/ngoc199" target="_blank"
+          >Ngọc Nguyễn Duy Minh</a
+        >.
+      </p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+      function showErrorMessage(name) {
+        let inputField = document.getElementsByName(name)[0]
+        inputField.classList.add("error")
+        let errorMessage = inputField.nextElementSibling
+        errorMessage.classList.add("active")
+      }
+    </script>
+  </body>
+</html>
