@@ -53,8 +53,10 @@
           <form action="/" class="shadow_bottom">
             <div class="form_group">
               <input
-                oninvalid="showErrorMessage('firstName');"
+                oninvalid="showErrorMessage(this.id);"
+                id="userFirstName"
                 type="text"
+                title="first name"
                 name="firstName"
                 aria-label="firstName"
                 placeholder="First Name"
@@ -66,8 +68,10 @@
             </div>
             <div class="form_group">
               <input
-                oninvalid="showErrorMessage('lastName');"
+                oninvalid="showErrorMessage(this.id);"
+                id="userLastName"
                 type="text"
+                title="last name"
                 name="lastName"
                 aria-label="lastName"
                 placeholder="Last Name"
@@ -79,8 +83,10 @@
             </div>
             <div class="form_group">
               <input
-                oninvalid="showErrorMessage('email');"
+                oninvalid="showErrorMessage(this.id);"
+                id="userEmail"
                 type="email"
+                title="email"
                 name="email"
                 aria-label="email"
                 placeholder="Email Address"
@@ -92,7 +98,9 @@
             </div>
             <div class="form_group">
               <input
-                oninvalid="showErrorMessage('password');"
+                oninvalid="showErrorMessage(this.id);"
+                id="userPassword"
+                title="password"
                 type="password"
                 name="password"
                 aria-label="password"
@@ -126,8 +134,8 @@
 
     <!-- SCRIPT -->
     <script>
-      function showErrorMessage(name) {
-        let inputField = document.getElementsByName(name)[0]
+      function showErrorMessage(id) {
+        let inputField = document.getElementById(id)
         inputField.classList.add("error")
         let errorMessage = inputField.nextElementSibling
         errorMessage.classList.add("active")
