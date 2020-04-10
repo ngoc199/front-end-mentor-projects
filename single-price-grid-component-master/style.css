@@ -18,7 +18,7 @@ body {
 }
 
 body {
-  background-color: var(--grayish-blue);
+  background-color: var(--light-gray-color);
 }
 
 h2 {
@@ -126,10 +126,9 @@ button {
 .attribution {
   font-size: 11px;
   text-align: center;
-  color: #ffffff;
 }
 .attribution a {
-  color: var(--light-gray-color);
+  color: var(--cyan-color);
 }
 
 @media screen and (min-width: 768px) {
