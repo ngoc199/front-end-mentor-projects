@@ -132,6 +132,9 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  #price {
+    width: 75%;
+  }
   .subscription,
   .why {
     width: 50%;
