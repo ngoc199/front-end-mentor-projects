@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Chat App CSS Illustration</title>
+
+  <link rel="stylesheet" href="app/css/style.css">
+</head>
+<body>
+
+  <section class="container-fluid" id="home">
+    <div class="container home-container">
+      <div class="phone">
+        <div class="phone__header">
+          <div class="phone__header__profile">
+            <div class="phone__header__profile__avatar">
+              <img src="images/avatar.jpg" alt="avatar">
+            </div>
+            <!-- End Phone Header Profile Avatar -->
+
+            <div class="phone__header__profile__content">
+              <h3 class="profile_name">Samuel Green</h3>
+              <p class="profile_status">Available to Walk</p>
+            </div>
+            <!-- End Phone Header Profile Content -->
+
+          </div>
+          <!-- End Phone Header Profile -->
+
+          <div class="phone_header_profile_more">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <!-- End Header Profile More -->
+        </div>
+        <!-- End Phone Header -->
+        <div class="phone__content">
+          <p class="content_request">That sounds great. I’d be happy with that.</p>
+          <p class="content_request">Could you send over some pictures of your dog, please?</p>
+          <div class="content_response content_response-images">
+            <img src="images/dog-image-1.jpg" alt="dog 1" class="response-image">
+            <img src="images/dog-image-2.jpg" alt="dog 2" class="response-image">
+            <img src="images/dog-image-3.jpg" alt="dog 3" class="response-image">
+          </div>
+          <p class="content_response">Here are a few pictures. She’s a happy girl!</p>
+          <p class="content_response">Can you make it?</p>
+          <p class="content_request">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+          <div class="content_request content_request_choice">
+            <input type="radio" name="time" id="30">
+            <label for="30">30 minute walk</label>
+            <span>$29</span>
+          </div>
+          <div class="content_request content_request_choice">
+            <input type="radio" name="time" id="1">
+            <label for="1">1 hour walk</label>
+            <span>$49</span>
+          </div>
+        </div>
+        <!-- End Phone Content -->
+        <div class="phone__text-input">
+          <input class="text-input_input" title="text input" type="text" placeholder="Type a message…">
+          <button type="submit" class="text-input_send">></button>
+
+        </div>
+        <!-- End Phone Text Input -->
+      </div>
+      <!-- End Phone -->
+
+      <div class="home-container_text-content">
+        <h1>Simple booking</h1> <p>
+  Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+        </div>
+      <!-- End Home Text Content -->
+    </div>
+    <!-- End Home Container -->
+  </section>
+  <!-- End Home Section -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/ngoc199">Ngoc Nguyen Duy Minh</a>.
+  </div>
+
+  <script src="app/js/script.js"></script>
+</body>
+</html>
