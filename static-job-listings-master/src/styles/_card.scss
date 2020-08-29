@@ -1,0 +1,113 @@
+.card-wrapper {
+	position: relative;
+	width: 90%;
+	margin: 2rem auto;
+	margin-top: 4rem;
+}
+
+.card {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0px 5px 5px $secondary;
+
+	@include mobile {
+		flex-flow: column;
+	}
+
+	&.featured-card::before {
+		content: "";
+		position: absolute;
+		width: 0.5rem;
+		height: 100%;
+		background-color: $primary;
+		left: 0;
+		top: 0;
+		border-top-left-radius: 15px;
+		border-bottom-left-radius: 15px;
+	}
+
+	.logo-container {
+		border-radius: 50%;
+		width: 20%;
+		height: auto;
+		flex-shrink: 1;
+
+		@include mobile {
+			position: absolute;
+			top: -2rem;
+			left: 2rem;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.details {
+		margin-right: auto;
+		margin-left: 2rem;
+		width: 35%;
+		min-width: 200px;
+		flex-shrink: 1;
+
+		@include mobile {
+			width: 100%;
+			margin: 0;
+			margin-top: 1rem;
+		}
+
+		div h5 {
+			display: inline-block;
+			margin: 0;
+			margin-right: 0.5rem;
+		}
+
+		.name {
+			color: $primary;
+			font-size: 1.2 * $normal_font_size;
+		}
+
+		.btn {
+			padding: 0.5rem 1rem;
+			border-radius: 2rem;
+		}
+
+		.new {
+			background-color: $primary;
+			color: $light;
+		}
+
+		.featured {
+			background-color: $dark;
+			color: $light;
+		}
+
+		.position {
+			font-size: 1.8 * $normal_font_size;
+			margin: 1rem 0;
+			font-family: $primary_font;
+
+			&:hover {
+				color: $primary;
+				cursor: pointer;
+			}
+		}
+
+		.day-time-locate {
+			color: $secondary;
+			font-size: 1.5 * $normal_font_size;
+			font-weight: lighter;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+}
